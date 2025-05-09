@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LingLora - Dil Öğrenmeye Başla</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --accent-color: #1150AB;
+      --feature-bg: #f5f5f5;
+    }
+
+    body.dark-mode {
+      --bg-color: #111111;
+      --text-color: #f1f1f1;
+      --feature-bg: #222222;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--accent-color);
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    nav a, .contact-buttons a, .toggle-mode {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .buttons button {
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .start-btn {
+      background-color: var(--accent-color);
+      color: white;
+    }
+
+    .demo-btn {
+      background-color: transparent;
+      color: var(--accent-color);
+      border: 2px solid var(--accent-color);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .feature {
+      background: var(--feature-bg);
+      padding: 1rem;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #f1f1f1;
+      margin-top: 3rem;
+    }
+
+    body.dark-mode footer {
+      background-color: #1a1a1a;
+      color: #f1f1f1;
+    }
+
+    .toggle-mode {
+      background: none;
+      border: 2px solid white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 0.5rem;
+      margin-left: 1rem;
+    }
+
+    .contact-buttons a {
+      padding: 0.4rem 0.8rem;
+      border: 2px solid white;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .buttons button {
+        width: 100%;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>LingLora</strong></div>
+    <nav>
+      <a href="#">Ana Sayfa</a>
+      <a href="#">Hakkımızda</a>
+      <a href="#">Kayıt</a>
+      <a href="#">Giriş</a>
+      <a href="#">İletişim</a>
+      <div class="contact-buttons">
+        <a href="mailto:support@linguacraft.com">E-posta</a>
+        <a href="https://instagram.com/linguacraft" target="_blank">Instagram</a>
+      </div>
+      <button class="toggle-mode" onclick="toggleMode()">Mod Değiştir</button>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h1>Her Gün 5 Dakikayla Yeni Bir Dil Öğren</h1>
+      <p>LingLora ile dil öğrenmeyi eğlenceli hale getir. Ücretsiz olarak hemen başlayabilirsin!</p>
+      <div class="buttons">
+        <button class="start-btn">Hemen Başla</button>
+        <button class="demo-btn">Demo Dersi İzle</button>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>Günlük Görevler</h3>
+        <p>Her gün birkaç dakikalık görevlerle alışkanlık oluştur.</p>
+      </div>
+      <div class="feature">
+        <h3>Konuşma Pratiği</h3>
+        <p>Ses tanıma ile gerçek zamanlı konuşma pratiği yap.</p>
+      </div>
+      <div class="feature">
+        <h3>İlerlemeni Takip Et</h3>
+        <p>Hedeflerine ulaşırken gelişimini grafiklerle takip et.</p>
+      </div>
+      <div class="feature">
+        <h3>Tüm Cihazlarla Uyumlu</h3>
+        <p>Mobil, tablet veya masaüstü fark etmez; her yerde seninle.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 LinguaCraft. Tüm hakları saklıdır.
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
